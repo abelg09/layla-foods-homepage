@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shop Layla | Premium Frozen Food UAE</title>
+    <meta name="description" content="Shop Layla sauces, samosas, gyoza, toasties, kebabs, pasta, pizzas and freezer staples delivered across Dubai.">
+    <link rel="icon" href="assets/favicon-la.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body data-page="shop">
+    <div id="siteHeader"></div>
+
+    <main class="page-shell">
+      <section class="page-hero shop-hero">
+        <div>
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <span>Shop</span>
+          </nav>
+          <p class="eyebrow">Shop Layla</p>
+          <h1 data-collection-title>All Products</h1>
+          <p data-collection-copy>Shop Layla's freezer range by category, recipe occasion, and quick add-ons.</p>
+          <div class="hero-actions">
+            <a class="primary-action" href="#collection">Start shopping</a>
+            <a class="secondary-action" href="layla-plus.html">Subscribe & save</a>
+          </div>
+        </div>
+        <div class="stacked-showcase category-stack" aria-hidden="true">
+          <article class="stack-card">
+            <img src="assets/photos/gyoza.jpg" alt="">
+            <span>Fold & Steam</span>
+          </article>
+          <article class="stack-card">
+            <img src="assets/photos/samosa.jpg" alt="">
+            <span>Golden Wraps</span>
+          </article>
+          <article class="stack-card">
+            <img src="assets/photos/kebab.jpg" alt="">
+            <span>The Grill & Steam</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="trust-strip inner-trust" aria-label="Layla trust markers">
+        <span>UAE ready</span>
+        <span>Cold-chain delivery</span>
+        <span>100% halal range</span>
+        <span>Free delivery over AED 350</span>
+        <span>Recipe basket builders</span>
+      </section>
+
+      <section class="shop-layout" id="collection">
+        <aside class="filter-panel">
+          <div class="filter-heading">
+            <p class="eyebrow">Collections</p>
+            <strong data-product-count>0 items</strong>
+          </div>
+          <nav class="category-rail" data-category-rail aria-label="Shop categories"></nav>
+          <div class="filter-box">
+            <strong>Filter by</strong>
+            <label><input type="checkbox" checked> Halal</label>
+            <label><input type="checkbox"> Vegetarian</label>
+            <label><input type="checkbox"> Quick prep</label>
+            <label><input type="checkbox"> Bundle ready</label>
+          </div>
+        </aside>
+
+        <div class="collection-panel">
+          <div class="collection-toolbar">
+            <div class="quick-pills">
+              <button type="button" data-filter-pill="all">All</button>
+              <button type="button" data-filter-pill="golden-wraps">Samosas</button>
+              <button type="button" data-filter-pill="fold-steam">Gyoza</button>
+              <button type="button" data-filter-pill="glazd">Sauces</button>
+              <button type="button" data-filter-pill="melt">Toasties</button>
+            </div>
+            <label>
+              Sort
+              <select data-sort>
+                <option value="featured">Featured</option>
+                <option value="new">New arrivals</option>
+                <option value="price-low">Price low to high</option>
+                <option value="price-high">Price high to low</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="product-grid collection-grid" data-collection-grid></div>
+        </div>
+      </section>
+    </main>
+
+    <div id="siteBasket"></div>
+    <div id="siteFooter"></div>
+
+    <script src="site-data.js"></script>
+    <script src="layout.js"></script>
+    <script src="inner-pages.js"></script>
+  </body>
+</html>

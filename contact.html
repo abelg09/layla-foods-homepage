@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Layla</title>
+    <meta name="description" content="Contact Layla for customer care, shipping, returns, store locator and FAQs.">
+    <link rel="icon" href="assets/favicon-la.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body data-page="contact">
+    <div id="siteHeader"></div>
+
+    <main class="page-shell">
+      <section class="page-hero compact-hero">
+        <div>
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <span>Contact</span>
+          </nav>
+          <p class="eyebrow">Help & FAQ</p>
+          <h1>Customer Care, Fast.</h1>
+          <p>Contact, delivery answers, returns, order tracking and store support in one place.</p>
+        </div>
+      </section>
+
+      <section class="form-section">
+        <form class="form-card">
+          <p class="eyebrow">Contact Us</p>
+          <h2>Send a message.</h2>
+          <label>Name<input type="text" placeholder="Full name"></label>
+          <label>Email<input type="email" placeholder="you@example.com"></label>
+          <label>Topic<select><option>Order support</option><option>Delivery</option><option>Returns</option><option>B2B</option></select></label>
+          <label>Message<textarea placeholder="How can we help?"></textarea></label>
+          <button class="primary-action" type="button">Send message</button>
+        </form>
+        <div class="accordion-list support-list" id="faq" data-accordion>
+          <details open>
+            <summary>Where does Layla deliver?</summary>
+            <p>The prototype is positioned for Dubai delivery with cold-chain handling.</p>
+          </details>
+          <details id="delivery">
+            <summary>When is delivery free?</summary>
+            <p>Free delivery unlocks once the basket reaches AED 350.</p>
+          </details>
+          <details>
+            <summary>How do returns work?</summary>
+            <p>Frozen food returns should be handled through customer care and Shopify order support.</p>
+          </details>
+          <details>
+            <summary>Can I track my order?</summary>
+            <p>The sitemap includes track order as a top utility link and customer account module.</p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <div id="siteBasket"></div>
+    <div id="siteFooter"></div>
+    <script src="site-data.js"></script>
+    <script src="layout.js"></script>
+    <script src="inner-pages.js"></script>
+  </body>
+</html>

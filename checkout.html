@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Layla Checkout</title>
+    <meta name="description" content="Layla Shopify checkout prototype with information, shipping, payment and review steps.">
+    <link rel="icon" href="assets/favicon-la.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body data-page="checkout">
+    <div id="siteHeader"></div>
+
+    <main class="page-shell">
+      <section class="checkout-grid">
+        <form class="form-card checkout-form">
+          <p class="eyebrow">Checkout</p>
+          <h1>Delivery Details</h1>
+          <div class="checkout-steps" aria-label="Checkout steps">
+            <span class="is-active">Information</span>
+            <span>Shipping</span>
+            <span>Payment</span>
+            <span>Review</span>
+          </div>
+          <label>Email<input type="email" placeholder="you@example.com"></label>
+          <label>Delivery address<input type="text" placeholder="Villa, apartment, building"></label>
+          <label>Area<input type="text" placeholder="Dubai Marina, Jumeirah, Downtown"></label>
+          <label>Delivery window<select><option>Tomorrow 08:00 - 10:00</option><option>Tomorrow 10:00 - 12:00</option><option>Tomorrow 14:00 - 16:00</option></select></label>
+          <button class="primary-action" type="button">Review order</button>
+        </form>
+        <aside class="order-summary">
+          <p class="eyebrow">Summary</p>
+          <h2>Your Layla Basket</h2>
+          <div><span>Subtotal</span><strong data-cart-total>AED 0.00</strong></div>
+          <div><span>Delivery</span><strong>Calculated</strong></div>
+          <div><span>Payment</span><strong>Visa · Mastercard · Apple Pay</strong></div>
+          <p data-cart-message>Add AED 350 more for free delivery</p>
+        </aside>
+      </section>
+    </main>
+
+    <div id="siteBasket"></div>
+    <div id="siteFooter"></div>
+    <script src="site-data.js"></script>
+    <script src="layout.js"></script>
+    <script src="inner-pages.js"></script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Layla Recipes | Basket-Ready Frozen Food Ideas</title>
+    <meta name="description" content="Shop recipe baskets from Layla, including butter chicken, ramen, pizza night, gyoza bowls and party platters.">
+    <link rel="icon" href="assets/favicon-la.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body data-page="recipes">
+    <div id="siteHeader"></div>
+
+    <main class="page-shell">
+      <section class="page-hero recipe-index-hero">
+        <div>
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <span>Recipes</span>
+          </nav>
+          <p class="eyebrow">Layla Kitchen</p>
+          <h1>Recipes that Build the Basket</h1>
+          <p>Every recipe connects directly to freezer SKUs, sauces and add-ons so shoppers can move from appetite to cart fast.</p>
+        </div>
+        <aside class="recipe-sticky-card">
+          <img src="assets/photos/kebab.jpg" alt="Butter chicken feast">
+          <strong>Featured basket</strong>
+          <span>Butter Chicken Feast</span>
+          <a href="recipe.html?recipe=butter-chicken-feast">Open recipe</a>
+        </aside>
+      </section>
+
+      <section class="recipe-index-layout">
+        <aside class="filter-panel sticky-panel">
+          <p class="eyebrow">Collections</p>
+          <a href="#breakfast">Breakfast</a>
+          <a href="#lunch">Lunch</a>
+          <a href="#dinner">Dinner</a>
+          <a href="#snacks">Snacks</a>
+          <a href="#party">Party Platters</a>
+          <div class="filter-box">
+            <strong>Recipe goals</strong>
+            <span>High AOV baskets</span>
+            <span>Social-first plating</span>
+            <span>Quick prep timing</span>
+          </div>
+        </aside>
+        <div class="recipe-index-grid" data-recipe-grid></div>
+      </section>
+    </main>
+
+    <div id="siteBasket"></div>
+    <div id="siteFooter"></div>
+    <script src="site-data.js"></script>
+    <script src="layout.js"></script>
+    <script src="inner-pages.js"></script>
+  </body>
+</html>

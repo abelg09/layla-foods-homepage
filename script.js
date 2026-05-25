@@ -3,12 +3,77 @@ let cartTotal = 0;
 let cartCount = 0;
 let heroIndex = 0;
 
+function getStoredCart() {
+  window.__laylaMemoryCart = window.__laylaMemoryCart || [];
+  if (typeof window.localStorage === "undefined") {
+    return readCookieCart() || window.__laylaMemoryCart;
+  }
+  try {
+    return JSON.parse(localStorage.getItem("laylaCart")) || [];
+  } catch (error) {
+    return readCookieCart() || window.__laylaMemoryCart;
+  }
+}
+
+function setStoredCart(cart) {
+  window.__laylaMemoryCart = cart;
+  if (typeof window.localStorage !== "undefined") {
+    localStorage.setItem("laylaCart", JSON.stringify(cart));
+  }
+  writeCookieCart(cart);
+}
+
+function readCookieCart() {
+  try {
+    const item = document.cookie.split("; ").find((row) => row.startsWith("laylaCart="));
+    return item ? JSON.parse(decodeURIComponent(item.split("=")[1])) : null;
+  } catch (error) {
+    return null;
+  }
+}
+
+function writeCookieCart(cart) {
+  try {
+    document.cookie = `laylaCart=${encodeURIComponent(JSON.stringify(cart))}; path=/; max-age=2592000`;
+  } catch (error) {
+    window.__laylaMemoryCart = cart;
+  }
+}
+
+function loadCartTotals() {
+  const products = window.LAYLA?.products || [];
+  const totals = getStoredCart().reduce((summary, item) => {
+    const product = products.find((entry) => entry.sku === item.sku);
+    return {
+      quantity: summary.quantity + item.quantity,
+      total: summary.total + (product ? product.price * item.quantity : 0)
+    };
+  }, { quantity: 0, total: 0 });
+  cartCount = totals.quantity;
+  cartTotal = totals.total;
+}
+
+function saveProductToCart(sku) {
+  if (!sku) {
+    return;
+  }
+  const cart = getStoredCart();
+  const existing = cart.find((item) => item.sku === sku);
+  if (existing) {
+    existing.quantity += 1;
+  } else {
+    cart.push({ sku, quantity: 1 });
+  }
+  setStoredCart(cart);
+}
+
 const heroSlides = [
   {
     eyebrow: "New this week",
     title: "The freezer upgrade",
     copy: "Premium gyoza, toasties, samosas, kebabs and sauces delivered cold-chain across Dubai.",
     cta: "Shop now",
+    href: "shop.html",
     image: "assets/photos/kebab.jpg",
     alt: "Grilled kebab platter with sauces"
   },
@@ -17,6 +82,7 @@ const heroSlides = [
     title: "Snack boxes made easy",
     copy: "Pick Golden Wraps, The Crunch and Drizzle chutneys for a ready-to-serve party spread.",
     cta: "Build a box",
+    href: "shop.html?collection=golden-wraps",
     image: "assets/photos/samosa.jpg",
     alt: "Golden samosas ready for a snack board"
   },
@@ -25,6 +91,7 @@ const heroSlides = [
     title: "Never run out",
     copy: "Monthly freezer boxes from AED 99 with family favorites, sauces and quick dinners.",
     cta: "Subscribe & save",
+    href: "layla-plus.html",
     image: "assets/photos/toastie.jpg",
     alt: "Toasted sandwich with melted filling"
   }
@@ -98,6 +165,7 @@ function showHero(index) {
   heroTitle.textContent = slide.title;
   heroCopy.textContent = slide.copy;
   heroCta.textContent = slide.cta;
+  heroCta.href = slide.href;
   heroImage.src = slide.image;
   heroImage.alt = slide.alt;
   heroDots.forEach((dot, dotIndex) => dot.classList.toggle("active", dotIndex === heroIndex));
@@ -131,6 +199,7 @@ document.querySelectorAll(".add-button").forEach((button) => {
     const card = button.closest(".product-card");
     cartTotal += Number(card.dataset.price);
     cartCount += 1;
+    saveProductToCart(card.dataset.sku);
     button.textContent = "Added";
     window.setTimeout(() => {
       button.textContent = "Add to cart";
@@ -149,7 +218,13 @@ categoryButtons.forEach((button) => {
 });
 
 searchInput.addEventListener("input", filterProducts);
+document.querySelector(".search").addEventListener("submit", (event) => {
+  event.preventDefault();
+  const query = searchInput.value.trim();
+  window.location.href = query ? `shop.html?q=${encodeURIComponent(query)}` : "shop.html";
+});
 document.querySelector("#prevHero").addEventListener("click", () => showHero(heroIndex - 1));
 document.querySelector("#nextHero").addEventListener("click", () => showHero(heroIndex + 1));
+loadCartTotals();
 setupReveals();
 updateCart();

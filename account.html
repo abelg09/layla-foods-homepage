@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Layla Account</title>
+    <meta name="description" content="Layla account dashboard prototype for orders, subscriptions, wishlist, rewards and addresses.">
+    <link rel="icon" href="assets/favicon-la.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body data-page="account">
+    <div id="siteHeader"></div>
+
+    <main class="page-shell">
+      <section class="page-hero compact-hero">
+        <div>
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <span>Account</span>
+          </nav>
+          <p class="eyebrow">My Account</p>
+          <h1>Orders, Rewards and Freezer Rhythm.</h1>
+          <p>This page maps to Shopify customer accounts and subscription management.</p>
+        </div>
+      </section>
+
+      <section class="account-grid">
+        <aside class="filter-panel sticky-panel">
+          <a class="is-active" href="#dashboard">Dashboard</a>
+          <a href="#orders">Orders</a>
+          <a href="#subscriptions">Subscriptions</a>
+          <a href="#wishlist">Wishlist</a>
+          <a href="#rewards">Rewards</a>
+          <a href="#addresses">Address book</a>
+        </aside>
+        <div class="dashboard-cards">
+          <article class="inner-band">
+            <p class="eyebrow">Next Delivery</p>
+            <h2>Tomorrow, 08:00 - 10:00</h2>
+            <p>Track cold-chain delivery and update address details before dispatch.</p>
+          </article>
+          <article class="inner-band">
+            <p class="eyebrow">Layla+</p>
+            <h2>Family Box</h2>
+            <p>8 products selected. Next billing date can be managed inside Shopify subscriptions.</p>
+          </article>
+          <article class="inner-band">
+            <p class="eyebrow">Rewards</p>
+            <h2>420 points</h2>
+            <p>Earn points on orders, referrals and recipe baskets.</p>
+          </article>
+          <article class="inner-band">
+            <p class="eyebrow">Wishlist</p>
+            <h2>5 saved items</h2>
+            <p>Move saved freezer staples into cart when ready.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <div id="siteBasket"></div>
+    <div id="siteFooter"></div>
+    <script src="site-data.js"></script>
+    <script src="layout.js"></script>
+    <script src="inner-pages.js"></script>
+  </body>
+</html>
