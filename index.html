@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Layla | Premium Frozen Food Delivery UAE</title>
+    <meta name="description" content="Shop Layla premium frozen meals, snacks, sauces, and subscription boxes delivered across Dubai.">
+    <link rel="icon" href="assets/layla-logo-red.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="topbar">
+        <span>Free delivery over AED 350</span>
+        <span>Dubai delivery in 24 hours</span>
+        <span>100% halal range</span>
+      </div>
+
+      <div class="header-main">
+        <a class="logo" href="#" aria-label="Layla home">
+          <img src="assets/layla-logo-red.png" alt="Layla">
+          <span>by Pavilion Foods</span>
+        </a>
+
+        <form class="search" role="search">
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="m21 21-4.35-4.35m1.35-5.65a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"></path>
+          </svg>
+          <input id="productSearch" type="search" placeholder="Search Layla products" autocomplete="off">
+          <button type="button">Products</button>
+        </form>
+
+        <div class="header-tools">
+          <button class="utility-button" type="button">العربية</button>
+          <button class="utility-button" type="button">Register</button>
+          <button class="utility-button" type="button">Sign In</button>
+          <button class="cart-button" type="button" aria-label="Cart">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M6 6h15l-1.5 9h-12L6 6ZM6 6 5.2 3H3"></path>
+              <circle cx="9" cy="20" r="1"></circle>
+              <circle cx="18" cy="20" r="1"></circle>
+            </svg>
+            <span id="cartCount">0</span>
+          </button>
+        </div>
+      </div>
+
+      <nav class="nav-row" aria-label="Main navigation">
+        <a href="#shop">
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M4 10h16M4 4h16M4 16h16"></path>
+          </svg>
+          Shop
+        </a>
+        <a href="#recipes">Recipes</a>
+        <a href="#layla-plus">Layla+</a>
+        <a href="#brands">Our Brands</a>
+        <a href="#b2b">B2B</a>
+        <a href="#help">Help</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="delivery-panel" aria-label="Delivery options">
+        <article class="delivery-card scheduled">
+          <div class="delivery-icon">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M4 13h12V6H4v7Zm12 0h2.5l2.5 3v3h-5v-6ZM6 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm12 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path>
+            </svg>
+          </div>
+          <div>
+            <strong>Scheduled Delivery</strong>
+            <span>Tomorrow 08:00 - 10:00</span>
+          </div>
+          <div>
+            <strong>Free Delivery</strong>
+            <span>Over AED 350</span>
+          </div>
+        </article>
+
+        <article class="delivery-card swift">
+          <strong>Layla Swift</strong>
+          <span>Delivery in 60 minutes</span>
+          <span>Minimum order AED 40</span>
+        </article>
+      </section>
+
+      <section class="hero" id="shop" aria-label="Featured Layla offer">
+        <button class="hero-arrow" type="button" id="prevHero" aria-label="Previous hero">‹</button>
+        <div class="hero-content">
+          <p class="eyebrow">New this week</p>
+          <h1 id="heroTitle">The freezer upgrade</h1>
+          <p id="heroCopy">Premium gyoza, toasties, samosas, kebabs and sauces delivered cold-chain across Dubai.</p>
+          <a class="primary-action" id="heroCta" href="#bestsellers">Shop now</a>
+        </div>
+        <img class="hero-image" src="assets/photos/kebab.jpg" alt="Grilled kebab platter with sauces">
+        <button class="hero-arrow" type="button" id="nextHero" aria-label="Next hero">›</button>
+        <div class="hero-dots" aria-hidden="true">
+          <span class="active"></span>
+          <span></span>
+          <span></span>
+        </div>
+      </section>
+
+      <section class="parent-section" id="b2b" aria-label="Pavilion Foods parent company">
+        <div class="parent-copy">
+          <p class="eyebrow">Part of Pavilion Foods</p>
+          <h2>Retail ease, backed by foodservice know-how.</h2>
+          <p>Pavilion Foods works across chilled, frozen and foodservice supply. Layla brings that same kitchen discipline into a home-friendly freezer range for everyday Dubai meals.</p>
+          <a class="outline-action" href="https://pavilionfoods.com/">Pavilion Foods</a>
+        </div>
+        <figure>
+          <img src="assets/photos/ravioli.jpg" alt="Prepared pasta dish from the Layla range">
+        </figure>
+      </section>
+
+      <section class="category-section" id="brands">
+        <div class="section-title">
+          <h2>Shop by category</h2>
+          <a href="#">View all</a>
+        </div>
+
+        <div class="category-row">
+          <button class="category-tile active" data-category="all">
+            <span><img src="assets/photos/pizza.jpg" alt=""></span>
+            All Products
+          </button>
+          <button class="category-tile" data-category="Fold & Steam">
+            <span><img src="assets/photos/gyoza.jpg" alt=""></span>
+            Gyoza & Shumai
+          </button>
+          <button class="category-tile" data-category="Golden Wraps">
+            <span><img src="assets/photos/samosa.jpg" alt=""></span>
+            Samosas
+          </button>
+          <button class="category-tile" data-category="Melt">
+            <span><img src="assets/photos/toastie.jpg" alt=""></span>
+            Toasties
+          </button>
+          <button class="category-tile" data-category="Glazd">
+            <span><img src="assets/photos/sauce.jpg" alt=""></span>
+            Sauces
+          </button>
+          <button class="category-tile" data-category="The Crunch">
+            <span><img src="assets/photos/dumplings.jpg" alt=""></span>
+            Crispy Bites
+          </button>
+          <button class="category-tile" data-category="Grill & Steam">
+            <span><img src="assets/photos/kebab.jpg" alt=""></span>
+            Kebabs
+          </button>
+          <button class="category-tile" data-category="The Long Game">
+            <span><img src="assets/photos/ravioli.jpg" alt=""></span>
+            Pasta
+          </button>
+        </div>
+      </section>
+
+      <section class="product-section" id="bestsellers">
+        <div class="section-title">
+          <div>
+            <h2>What's new this month?</h2>
+            <p id="productStatus">Shop our launch edit of Layla bestsellers.</p>
+          </div>
+          <a href="#">Shop all</a>
+        </div>
+
+        <div class="product-grid" id="productGrid">
+          <article class="product-card" data-category="Fold & Steam" data-name="Wagyu Gyoza" data-price="65">
+            <button class="wishlist" type="button" aria-label="Save Wagyu Gyoza">♡</button>
+            <img src="assets/photos/gyoza.jpg" alt="Layla Wagyu Gyoza">
+            <div class="product-body">
+              <span>Fold & Steam</span>
+              <h3>Wagyu Gyoza</h3>
+              <p>25g x 10 pcs</p>
+              <strong>AED 65.00 each</strong>
+              <small>Pairs with Black Pepper Sauce</small>
+              <button class="add-button" type="button">Add to cart</button>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="Melt" data-name="Chicken Tikka Toastie" data-price="38">
+            <button class="wishlist" type="button" aria-label="Save Chicken Tikka Toastie">♡</button>
+            <img src="assets/photos/toastie.jpg" alt="Layla Chicken Tikka Toastie">
+            <div class="product-body">
+              <span>Melt</span>
+              <h3>Chicken Tikka Toastie</h3>
+              <p>4 pcs</p>
+              <strong>AED 38.00 each</strong>
+              <small>Add Mango Chutney</small>
+              <button class="add-button" type="button">Add to cart</button>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="Golden Wraps" data-name="Punjabi Samosa" data-price="32">
+            <button class="wishlist" type="button" aria-label="Save Punjabi Samosa">♡</button>
+            <img src="assets/photos/samosa.jpg" alt="Layla Punjabi Samosa">
+            <div class="product-body">
+              <span>Golden Wraps</span>
+              <h3>Punjabi Samosa</h3>
+              <p>30g x 10 pcs</p>
+              <strong>AED 32.00 each</strong>
+              <small>Best with Tamarind Chutney</small>
+              <button class="add-button" type="button">Add to cart</button>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="The Crunch" data-name="Shawarma Puff" data-price="42">
+            <button class="wishlist" type="button" aria-label="Save Shawarma Puff">♡</button>
+            <img src="assets/photos/pizza.jpg" alt="Layla Shawarma Puff">
+            <div class="product-body">
+              <span>The Crunch</span>
+              <h3>Shawarma Puff</h3>
+              <p>12 pcs</p>
+              <strong>AED 42.00 each</strong>
+              <small>Friday snack board hero</small>
+              <button class="add-button" type="button">Add to cart</button>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="The Crunch" data-name="Korean Chicken Popcorn" data-price="45">
+            <button class="wishlist" type="button" aria-label="Save Korean Chicken Popcorn">♡</button>
+            <img src="assets/photos/dumplings.jpg" alt="Layla Korean Chicken Popcorn">
+            <div class="product-body">
+              <span>The Crunch</span>
+              <h3>Korean Chicken Popcorn</h3>
+              <p>350g</p>
+              <strong>AED 45.00 each</strong>
+              <small>Toss with Gochujang</small>
+              <button class="add-button" type="button">Add to cart</button>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="The Long Game" data-name="Spinach Ricotta Ravioli" data-price="52">
+            <button class="wishlist" type="button" aria-label="Save Spinach Ricotta Ravioli">♡</button>
+            <img src="assets/photos/ravioli.jpg" alt="Layla Spinach and Ricotta Ravioli">
+            <div class="product-body">
+              <span>The Long Game</span>
+              <h3>Spinach & Ricotta Ravioli</h3>
+              <p>500g</p>
+              <strong>AED 52.00 each</strong>
+              <small>Make a 10 minute dinner</small>
+              <button class="add-button" type="button">Add to cart</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="feature-rails">
+        <article class="feature-card red">
+          <div>
+            <p class="eyebrow">Bundle builder</p>
+            <h2>Build a Friday snack box</h2>
+            <p>Choose any 4 packs and add chutneys before checkout.</p>
+            <a class="secondary-action" href="#bestsellers">Start building</a>
+          </div>
+          <img src="assets/photos/samosa.jpg" alt="Samosa snack platter">
+        </article>
+        <article class="feature-card cream" id="layla-plus">
+          <div>
+            <p class="eyebrow">Layla+</p>
+            <h2>Subscribe and save</h2>
+            <p>Monthly freezer boxes from AED 99 with swap-anytime product choices.</p>
+            <a class="primary-action" href="#">Choose your box</a>
+          </div>
+          <img src="assets/photos/kebab.jpg" alt="Assorted grilled meal platter">
+        </article>
+      </section>
+
+      <section class="recipe-section" id="recipes" aria-label="Layla recipes">
+        <div class="recipe-heading">
+          <div>
+            <p class="eyebrow">Recipes</p>
+            <h2>Recipe ideas that fill the basket.</h2>
+          </div>
+          <a href="#">View all recipes</a>
+        </div>
+
+        <div class="recipe-layout">
+          <div class="recipe-list">
+            <article class="recipe-card">
+              <div class="recipe-copy">
+                <span class="recipe-label">Comfort</span>
+                <div class="recipe-meta" aria-label="Recipe details">
+                  <span>35 minutes</span>
+                  <span>4-6 people</span>
+                  <span>Medium</span>
+                </div>
+                <h3>Butter Chicken Feast</h3>
+                <p>Turn Layla kebabs and makhani sauce into a rich family-style dinner with naan, rice and fresh herbs.</p>
+              </div>
+              <figure class="recipe-media">
+                <img src="assets/photos/kebab.jpg" alt="Butter chicken feast with grilled kebabs">
+                <button class="play-button" type="button" aria-label="Play Butter Chicken Feast recipe"></button>
+              </figure>
+            </article>
+
+            <article class="recipe-card">
+              <div class="recipe-copy">
+                <span class="recipe-label">Quick lunch</span>
+                <div class="recipe-meta" aria-label="Recipe details">
+                  <span>20 minutes</span>
+                  <span>2 people</span>
+                  <span>Easy</span>
+                </div>
+                <h3>Seoul Fire Dumpling Bowl</h3>
+                <p>Steam gyoza, toss with gochujang glaze, then layer over noodles, lime, cucumber and chilli.</p>
+              </div>
+              <figure class="recipe-media">
+                <img src="assets/photos/gyoza.jpg" alt="Gyoza bowl with herbs and chilli">
+                <button class="play-button" type="button" aria-label="Play Seoul Fire Dumpling Bowl recipe"></button>
+              </figure>
+            </article>
+
+            <article class="recipe-card">
+              <div class="recipe-copy">
+                <span class="recipe-label">Vegetarian</span>
+                <div class="recipe-meta" aria-label="Recipe details">
+                  <span>15 minutes</span>
+                  <span>2 people</span>
+                  <span>Easy</span>
+                </div>
+                <h3>Date Night Ravioli</h3>
+                <p>Finish spinach ricotta ravioli with brown butter, parmesan, herbs and a bright side salad.</p>
+              </div>
+              <figure class="recipe-media">
+                <img src="assets/photos/ravioli.jpg" alt="Spinach ricotta ravioli in sauce">
+                <button class="play-button" type="button" aria-label="Play Date Night Ravioli recipe"></button>
+              </figure>
+            </article>
+
+            <article class="recipe-card">
+              <div class="recipe-copy">
+                <span class="recipe-label">Street food</span>
+                <div class="recipe-meta" aria-label="Recipe details">
+                  <span>18 minutes</span>
+                  <span>3-4 people</span>
+                  <span>Easy</span>
+                </div>
+                <h3>Punjabi Samosa Chaat</h3>
+                <p>Crush hot samosas over yoghurt, tamarind chutney, herbs and sev for a fast party plate.</p>
+              </div>
+              <figure class="recipe-media">
+                <img src="assets/photos/samosa.jpg" alt="Punjabi samosas with chutney">
+                <button class="play-button" type="button" aria-label="Play Punjabi Samosa Chaat recipe"></button>
+              </figure>
+            </article>
+
+            <article class="recipe-card">
+              <div class="recipe-copy">
+                <span class="recipe-label">Brunch</span>
+                <div class="recipe-meta" aria-label="Recipe details">
+                  <span>12 minutes</span>
+                  <span>2 people</span>
+                  <span>Easy</span>
+                </div>
+                <h3>Tikka Toastie Brunch</h3>
+                <p>Serve crisp chicken tikka toasties with spiced eggs, pickled onion and a cooling chutney dip.</p>
+              </div>
+              <figure class="recipe-media">
+                <img src="assets/photos/toastie.jpg" alt="Chicken tikka toastie brunch plate">
+                <button class="play-button" type="button" aria-label="Play Tikka Toastie Brunch recipe"></button>
+              </figure>
+            </article>
+
+            <article class="recipe-card">
+              <div class="recipe-copy">
+                <span class="recipe-label">Sharing</span>
+                <div class="recipe-meta" aria-label="Recipe details">
+                  <span>25 minutes</span>
+                  <span>4 people</span>
+                  <span>Easy</span>
+                </div>
+                <h3>Crispy Snack Board</h3>
+                <p>Build a grazing board with puffs, dumplings, kebabs, sauces and crunchy salad for weekend hosting.</p>
+              </div>
+              <figure class="recipe-media">
+                <img src="assets/photos/dumplings.jpg" alt="Crispy dumplings for a sharing board">
+                <button class="play-button" type="button" aria-label="Play Crispy Snack Board recipe"></button>
+              </figure>
+            </article>
+          </div>
+
+          <aside class="recipe-sidebar" aria-label="Recipe extras">
+            <article class="chef-card">
+              <img src="assets/photos/toastie.jpg" alt="Layla kitchen prep">
+              <h3>Layla Kitchen</h3>
+              <p>Freezer-first meals built with Pavilion foodservice discipline and a home cook's rhythm.</p>
+              <div class="social-row" aria-label="Social channels">
+                <a href="#" aria-label="Instagram">Ig</a>
+                <a href="#" aria-label="YouTube">Yt</a>
+                <a href="#" aria-label="Pinterest">Pt</a>
+              </div>
+            </article>
+
+            <article class="cookbook-card">
+              <p class="eyebrow">Cookbooks</p>
+              <h3>Friday Freezer Edit</h3>
+              <p>Hosting menus, quick sauces and basket-ready recipes for the Layla launch range.</p>
+              <a class="secondary-action" href="#bestsellers">Shop the edit</a>
+            </article>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <aside class="basket-summary" aria-label="Basket summary">
+      <div>
+        <strong id="deliveryMessage">Add AED 350 more for free delivery</strong>
+        <span id="cartTotal">Basket AED 0.00</span>
+      </div>
+      <div class="progress-track" aria-hidden="true">
+        <span id="progressFill"></span>
+      </div>
+      <button type="button">Checkout</button>
+    </aside>
+
+    <footer class="site-footer" id="help">
+      <div>
+        <img src="assets/layla-logo-cream.png" alt="Layla">
+        <p>A consumer food brand from Pavilion Foods, delivered across Dubai.</p>
+      </div>
+      <nav aria-label="Footer">
+        <a href="#shop">Shop</a>
+        <a href="#recipes">Recipes</a>
+        <a href="#layla-plus">Layla+</a>
+        <a href="#b2b">Wholesale</a>
+        <a href="#">Contact</a>
+      </nav>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
