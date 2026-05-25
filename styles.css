@@ -1,27 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;600;800&display=swap");
-
-@font-face {
-  font-family: "Argesta Display";
-  src: url("assets/fonts/ArgestaDisplay-Regular.woff2") format("woff2");
-  font-display: swap;
-  font-style: normal;
-  font-weight: 400;
-}
-
 :root {
-  --red: #b13a38;
-  --red-dark: #762321;
-  --cream: #fbf2d9;
-  --cream-soft: #fff9ea;
-  --ink: #141414;
-  --muted: #5e6d78;
-  --green: #0f5a3d;
-  --pavilion-blue: #1e416c;
-  --pavilion-blue-bright: #185494;
-  --pavilion-stone: #f5f3ec;
-  --gold: #c7943c;
-  --line: rgba(16, 38, 56, 0.12);
-  --shadow: 0 14px 36px rgba(16, 38, 56, 0.12);
+  --red: #d1282e;
+  --red-dark: #9f1d22;
+  --cream: #f3ece3;
+  --cream-soft: #fbf7ef;
+  --ink: #000;
+  --muted: #5f5750;
+  --teal: #2ebcc1;
+  --brand-black: #000;
+  --brand-cyan: #2ebcc1;
+  --brand-stone: #f3ece3;
+  --gold: #d1282e;
+  --line: rgba(0, 0, 0, 0.12);
+  --shadow: 0 14px 36px rgba(0, 0, 0, 0.12);
 }
 
 * {
@@ -36,10 +26,10 @@ body {
   margin: 0;
   color: var(--ink);
   background:
-    linear-gradient(rgba(247, 247, 243, 0.9), rgba(247, 247, 243, 0.9)),
+    linear-gradient(rgba(243, 236, 227, 0.92), rgba(243, 236, 227, 0.92)),
     url("assets/food-pattern.svg") center top / 760px 360px repeat,
-    #f7f7f3;
-  font-family: "Jost", Arial, Helvetica, sans-serif;
+    var(--cream);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.45;
   padding-bottom: 92px;
 }
@@ -63,7 +53,7 @@ input {
   position: sticky;
   top: 0;
   z-index: 30;
-  background: rgba(255, 249, 234, 0.97);
+  background: rgba(243, 236, 227, 0.97);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(16px);
 }
@@ -88,24 +78,8 @@ input {
   padding: 18px 34px;
 }
 
-.logo {
-  display: inline-grid;
-  align-items: center;
-  width: max-content;
-}
-
 .logo img {
   width: 120px;
-}
-
-.logo span {
-  margin-top: 3px;
-  color: var(--pavilion-blue);
-  font-size: 10px;
-  font-weight: 800;
-  line-height: 1;
-  text-transform: uppercase;
-  white-space: nowrap;
 }
 
 .search {
@@ -146,7 +120,7 @@ input {
   height: 34px;
   padding: 0 14px;
   color: var(--muted);
-  background: #f5f5f1;
+  background: var(--cream);
   border: 0;
   border-radius: 8px;
   cursor: pointer;
@@ -180,8 +154,8 @@ input {
   gap: 8px;
   padding: 0 18px;
   color: #fff;
-  background: var(--pavilion-blue);
-  border-color: var(--pavilion-blue);
+  background: var(--brand-black);
+  border-color: var(--brand-black);
 }
 
 .nav-row {
@@ -223,7 +197,7 @@ input {
   background: #fff;
   border: 1px solid var(--line);
   border-radius: 8px;
-  box-shadow: 0 8px 24px rgba(16, 38, 56, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
 .delivery-card strong,
@@ -239,8 +213,8 @@ input {
 .scheduled {
   grid-template-columns: 56px 1fr 1fr;
   color: #fff;
-  background: var(--pavilion-blue);
-  border-color: var(--pavilion-blue);
+  background: var(--brand-black);
+  border-color: var(--brand-black);
 }
 
 .scheduled span {
@@ -275,7 +249,7 @@ input {
   margin: 0 auto 56px;
   overflow: hidden;
   background:
-    linear-gradient(90deg, rgba(251, 242, 217, 0.98) 0%, rgba(255, 247, 232, 0.94) 42%, rgba(177, 58, 56, 0.18) 100%),
+    linear-gradient(90deg, rgba(243, 236, 227, 0.98) 0%, rgba(243, 236, 227, 0.94) 42%, rgba(209, 40, 46, 0.2) 100%),
     url("assets/food-pattern.svg") center / 760px 360px repeat,
     var(--cream);
   border-radius: 8px;
@@ -311,17 +285,18 @@ h2,
 .recipe-card h3,
 .chef-card h3,
 .cookbook-card h3 {
-  font-family: "Argesta Display", Georgia, serif;
-  font-weight: 400;
+  font-family: "Arial Black", Impact, sans-serif;
+  font-weight: 900;
   letter-spacing: 0;
+  text-transform: uppercase;
 }
 
 h1 {
   max-width: 520px;
   margin-bottom: 18px;
   color: var(--red-dark);
-  font-size: 66px;
-  line-height: 1;
+  font-size: 64px;
+  line-height: 0.94;
 }
 
 h2 {
@@ -339,7 +314,7 @@ h3 {
 
 .hero-content p:not(.eyebrow) {
   max-width: 520px;
-  color: #475665;
+  color: var(--muted);
   font-size: 18px;
 }
 
@@ -367,7 +342,7 @@ h3 {
 .secondary-action {
   color: var(--red-dark);
   background: #fff;
-  border: 1px solid rgba(177, 58, 56, 0.24);
+  border: 1px solid rgba(209, 40, 46, 0.24);
 }
 
 .outline-action {
@@ -377,7 +352,7 @@ h3 {
 }
 
 .outline-action:hover {
-  color: var(--pavilion-blue);
+  color: var(--red);
   background: #fff;
 }
 
@@ -417,7 +392,7 @@ h3 {
 .hero-dots span {
   width: 10px;
   height: 10px;
-  background: rgba(16, 38, 56, 0.22);
+  background: rgba(0, 0, 0, 0.22);
   border-radius: 999px;
 }
 
@@ -445,7 +420,7 @@ h3 {
   overflow: hidden;
   padding: 0;
   color: #fff;
-  background: var(--pavilion-blue);
+  background: var(--red);
   border-radius: 8px;
   box-shadow: var(--shadow);
 }
@@ -484,7 +459,7 @@ h3 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: grayscale(1) contrast(1.08);
+  filter: saturate(1.06) contrast(1.05);
 }
 
 .section-title {
@@ -537,7 +512,7 @@ h3 {
   background: #fff;
   border: 2px solid transparent;
   border-radius: 999px;
-  box-shadow: 0 10px 24px rgba(16, 38, 56, 0.08);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
   transition: transform 160ms ease, border-color 160ms ease;
 }
 
@@ -557,9 +532,9 @@ h3 {
   max-width: none;
   padding-top: 48px;
   background:
-    linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)),
+    linear-gradient(rgba(243, 236, 227, 0.88), rgba(243, 236, 227, 0.88)),
     url("assets/food-pattern.svg") center top / 760px 360px repeat,
-    #fff;
+    var(--cream);
 }
 
 .product-section > .section-title,
@@ -600,7 +575,7 @@ h3 {
   background: var(--cream-soft);
   border: 1px solid var(--line);
   border-radius: 8px;
-  box-shadow: 0 8px 22px rgba(16, 38, 56, 0.06);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
 }
 
 .product-card[hidden] {
@@ -715,10 +690,10 @@ h3 {
 
 .feature-card.cream {
   background:
-    linear-gradient(rgba(251, 242, 217, 0.9), rgba(251, 242, 217, 0.9)),
+    linear-gradient(rgba(243, 236, 227, 0.9), rgba(243, 236, 227, 0.9)),
     url("assets/food-pattern.svg") center / 760px 360px repeat,
     var(--cream);
-  border: 1px solid rgba(30, 65, 108, 0.16);
+  border: 1px solid rgba(209, 40, 46, 0.16);
 }
 
 .recipe-section {
@@ -726,9 +701,9 @@ h3 {
   padding-top: 64px;
   padding-bottom: 76px;
   background:
-    linear-gradient(rgba(245, 243, 236, 0.86), rgba(245, 243, 236, 0.86)),
+    linear-gradient(rgba(243, 236, 227, 0.88), rgba(243, 236, 227, 0.88)),
     url("assets/food-pattern.svg") center / 760px 360px repeat,
-    var(--pavilion-stone);
+    var(--cream);
 }
 
 .recipe-heading,
@@ -785,10 +760,10 @@ h3 {
 .recipe-card,
 .chef-card,
 .cookbook-card {
-  background: rgba(255, 249, 234, 0.68);
-  border: 2px solid rgba(199, 148, 60, 0.68);
+  background: rgba(243, 236, 227, 0.72);
+  border: 2px solid rgba(209, 40, 46, 0.52);
   border-radius: 8px;
-  box-shadow: 0 16px 34px rgba(30, 65, 108, 0.08);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.08);
 }
 
 .recipe-card {
@@ -860,7 +835,7 @@ h3 {
   min-height: 216px;
   margin: 22px 22px 22px 0;
   overflow: hidden;
-  border: 1px solid rgba(199, 148, 60, 0.54);
+  border: 1px solid rgba(209, 40, 46, 0.42);
   border-radius: 8px;
 }
 
@@ -895,7 +870,7 @@ h3 {
   content: "";
   border-top: 13px solid transparent;
   border-bottom: 13px solid transparent;
-  border-left: 18px solid var(--pavilion-blue);
+  border-left: 18px solid var(--cream);
 }
 
 .chef-card,
@@ -912,7 +887,7 @@ h3 {
   height: 150px;
   margin: 0 auto 26px;
   object-fit: cover;
-  border: 2px solid var(--gold);
+  border: 2px solid var(--red);
   border-radius: 999px;
 }
 
@@ -935,7 +910,7 @@ h3 {
   width: 42px;
   height: 42px;
   color: var(--gold);
-  border: 2px solid rgba(199, 148, 60, 0.68);
+  border: 2px solid rgba(209, 40, 46, 0.52);
   border-radius: 999px;
   font-size: 12px;
   font-weight: 900;
@@ -965,9 +940,9 @@ h3 {
   margin: 0 auto;
   padding: 14px;
   color: #fff;
-  background: var(--pavilion-blue);
+  background: var(--ink);
   border-radius: 8px;
-  box-shadow: 0 18px 42px rgba(16, 38, 56, 0.32);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.32);
 }
 
 .basket-summary.is-active {
@@ -995,7 +970,7 @@ h3 {
   display: block;
   width: 0%;
   height: 100%;
-  background: linear-gradient(90deg, var(--gold), var(--cream));
+  background: linear-gradient(90deg, var(--red), var(--teal));
   transition: width 180ms ease;
 }
 
@@ -1012,7 +987,7 @@ h3 {
   gap: 30px;
   padding: 44px 6vw 58px;
   color: var(--cream);
-  background: var(--pavilion-blue);
+  background: var(--red);
 }
 
 .site-footer img {
