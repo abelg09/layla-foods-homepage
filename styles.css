@@ -1085,45 +1085,71 @@ h3 {
 
 .stacked-showcase {
   position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 12px;
   min-height: 360px;
+  overflow: visible;
+  padding: 34px 16px 24px;
+  isolation: isolate;
 }
 
 .stack-card {
-  position: absolute;
-  right: 5%;
-  top: 50%;
-  width: min(320px, 78%);
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-rows: minmax(210px, 1fr) auto;
+  flex: 1 1 0;
+  min-width: 188px;
+  max-width: 300px;
+  margin-left: 0;
   overflow: hidden;
   background: var(--cream-soft);
   border: 2px solid rgba(209, 40, 46, 0.52);
   border-radius: 8px;
   box-shadow: 0 26px 52px rgba(0, 0, 0, 0.18);
-  transform: translateY(-50%) rotate(-7deg);
+  transform: rotate(-5deg) translateY(-8px);
   transform-origin: center;
 }
 
+.stack-card:first-child {
+  z-index: 3;
+  margin-left: 0;
+  transform: rotate(-4deg) translateY(-16px);
+}
+
 .stack-card:nth-child(2) {
-  right: 22%;
-  transform: translateY(-46%) rotate(5deg);
+  z-index: 2;
+  transform: rotate(4deg) translateY(2px);
 }
 
 .stack-card:nth-child(3) {
-  right: 39%;
-  transform: translateY(-42%) rotate(-1deg);
+  z-index: 1;
+  transform: rotate(1deg) translateY(14px);
 }
 
 .stack-card img {
   width: 100%;
-  aspect-ratio: 1.1;
+  height: 100%;
+  min-height: 220px;
   object-fit: cover;
 }
 
 .stack-card span {
-  display: block;
-  padding: 14px 16px 16px;
+  display: flex;
+  align-items: center;
+  min-height: 58px;
+  padding: 14px 18px 16px;
   color: var(--red);
+  background: rgba(251, 247, 239, 0.96);
+  font-size: 15px;
   font-weight: 900;
+  line-height: 1.05;
+  overflow: hidden;
+  text-overflow: ellipsis;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .trust-strip {
@@ -1205,11 +1231,12 @@ h3 {
 .category-rail a,
 .filter-panel > a {
   display: grid;
-  grid-template-columns: 42px minmax(0, 1fr);
-  gap: 10px;
+  grid-template-columns: 52px minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  gap: 3px 12px;
   align-items: center;
-  min-height: 52px;
-  padding: 8px;
+  min-height: 68px;
+  padding: 10px;
   border: 1px solid transparent;
   border-radius: 8px;
   font-weight: 900;
@@ -1232,17 +1259,36 @@ h3 {
 }
 
 .category-rail img {
-  width: 42px;
-  height: 42px;
+  grid-row: 1 / span 2;
+  width: 52px;
+  height: 52px;
   object-fit: cover;
   border-radius: 999px;
 }
 
+.category-rail span {
+  grid-column: 2;
+  align-self: end;
+  min-width: 0;
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.05;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .category-rail small {
+  grid-column: 2;
+  align-self: start;
   display: block;
   color: var(--muted);
-  font-size: 11px;
-  font-weight: 700;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.15;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .filter-box {
@@ -1962,15 +2008,15 @@ h3 {
   }
 
   .stacked-showcase:hover .stack-card:nth-child(1) {
-    transform: translate(-10px, -54%) rotate(-11deg);
+    transform: translate(-8px, -20px) rotate(-7deg);
   }
 
   .stacked-showcase:hover .stack-card:nth-child(2) {
-    transform: translate(8px, -50%) rotate(8deg);
+    transform: translate(8px, -2px) rotate(7deg);
   }
 
   .stacked-showcase:hover .stack-card:nth-child(3) {
-    transform: translate(-4px, -46%) rotate(1deg);
+    transform: translate(10px, 8px) rotate(3deg);
   }
 
   .rotating-box,
@@ -2270,9 +2316,26 @@ h3 {
     min-height: 300px;
   }
 
+  .stacked-showcase {
+    overflow: hidden;
+    padding-right: 4px;
+    padding-left: 4px;
+  }
+
   .stack-card {
-    right: 5%;
-    width: 72%;
+    flex-basis: 62%;
+    min-width: 0;
+    margin-left: -34%;
+  }
+
+  .stack-card img {
+    min-height: 190px;
+  }
+
+  .stack-card span {
+    min-height: 50px;
+    padding: 12px 14px;
+    font-size: 13px;
   }
 
   .filter-panel,
@@ -2288,7 +2351,7 @@ h3 {
   }
 
   .category-rail a {
-    flex: 0 0 220px;
+    flex: 0 0 238px;
   }
 
   .collection-toolbar {
